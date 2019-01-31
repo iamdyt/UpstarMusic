@@ -1,0 +1,23 @@
+#headertext{
+    background:#A31A1D;
+}
+
+h1{
+    color: white !important;
+}
+
+i{
+    font-size: 1.7em;
+}
+
+.card-header,#createbutton{
+    background:#053C5B !important;
+    color: white !important;
+    font-size: 3rem;
+}
+#createbutton,input{
+    padding-bottom: 5rem;
+}
+
+
+

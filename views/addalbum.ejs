@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <% include config/bootstrapcdn %>
+    <link rel ='stylesheet' href="../styles/createartist.css">  
+    
+    <title>All-Artist</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <!-- Top-Bar -->
+        <div class="row">
+            <div class="col">
+                <nav class="nav nav-justified display-4 text-light py-3 pl-2 shadow-sm rounded" id="headertext">
+                    <i class="fas fa-play ml-2"></i>
+                    <a class="nav-item nav-link active" href="/"><h1> UPSTAR MUSIC</h1></a>
+                    <a class="nav-item nav-link" href="/showall"><h1>List Artist</h1></a>
+                    <a class="nav-item nav-link" href="/create-artist"><h1>Create Artist</h1></a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <form action="/album/<%= id %>" method="POST" class="form-group">
+                <input type="text" required=true class="form-control py-4 mt-2" placeholder="Album Title" name="title">
+                <input type="date" required=true  class="form-control py-4 mt-2" placeholder="Date released" name='date'>
+                <input type="number" required=true  class="form-control py-4 mt-2" placeholder="Number of Copies Sold" name="copiesSold">
+                <input type="number" required=true  class="form-control py-4 mt-2" placeholder="Number of tracks" name="tracks">
+                <span>
+                    <button class="btn rounded-0 shadow-sm btn-block py-3 btn-success mt-3"><h4>&plus; Insert</h4></button>
+                </span>
+                    
+            </form>
+        </div>
+
+
+    <% include config/jquerycdn %>
+</body>

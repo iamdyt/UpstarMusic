@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <% include config/bootstrapcdn %>
+    <link rel ='stylesheet' href="../styles/createartist.css">  
+    
+    <title>Create-Artist</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <!-- Top-Bar -->
+        <div class="row">
+            <div class="col">
+                <nav class="nav nav-justified display-4 text-light py-3 pl-2 shadow-sm rounded" id="headertext">
+                    <i class="fas fa-play ml-2"></i>
+                    <a class="nav-item nav-link active" href="/"><h1> UPSTAR MUSIC</h1></a>
+                    <a class="nav-item nav-link" href="/showall"><h1>List Artist</h1></a>
+                    <a class="nav-item nav-link" href="/create-artist"><h1>Create Artist</h1></a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="row mt-2">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-header">
+                        <h4 class="display-4 text-center">Create Artist</h4><hr color='white'>
+                    </div>
+                    <div class="card-body">
+                        <form action="/create-artist" method="POST"  class="form-group">
+                            <input type="text" placeholder='Artist Name' required='true' autofocus=true class="form-control mb-2 rounded-0 py-4" name="name">
+                            <input type="number" placeholder='Age' class="form-control mb-2 py-4 rounded-0" name="age">
+                            <input type="number" placeholder='Years Active' class="form-control rounded-0 mb-2 py-4" name="activeyears">
+                            <input type="text" placeholder='Genre' class="form-control mb-2 rounded-0 py-4" name="genre">
+                            <input type="text" placeholder='Official Website' class="form-control mb-2 rounded-0 py-4" name="website">
+                            <input type="number" placeholder='Networth' class="form-control mb-2 rounded-0 py-4" name="networth">
+                            <input type="text" placeholder='Label Name' class="form-control mb-2 rounded-0 py-4" name="label">
+                            <h4 class="display-4 text-center">Album</h4><hr color='white'>
+                            <input type="text" placeholder='Album Title' required=true class="form-control mb-2 rounded-0 py-4" name="albumtitle">
+                            <input type="datetime-local" placeholder='Album Date' required=true class="form-control mb-2 rounded-0 py-4" name="albumdate">
+                            <input type="number" placeholder='Copies Sold'required=true class="form-control mb-2 rounded-0 py-4" name="copiessold">
+                            <input type="number" placeholder='TracksNumber' required=true class="form-control mb-2 rounded-0 py-4" name="tracksnumber">
+                            <button class="btn btn-primary form-control shadow-sm border-0 rounded-0" id="createbutton">Create Artist</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <% include config/jquerycdn %>
+</body>
