@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container mt-3">
+    <div class="container-fluid">
         <!-- Top-Bar -->
         <div class="row">
             <div class="col">
@@ -24,25 +24,27 @@
             </div>
         </div>
 
-        <ul class="list-group mt-2">
+        <ul class="list-group mt-2 container">
                     <% for (let artist of artists) { %>
                         <br>
-                        <h4 class ='text-center'><%= artist.name.toUpperCase() %>'s Details&nbsp; &nbsp;&nbsp;&nbsp;<%= artist.numberofalbum %> Album Released</h4>
+                        <h4 class ='text-center badge badge-warning py-4 px-4'><%= artist.name.toUpperCase() %>'s Details&nbsp; &nbsp;&nbsp;&nbsp;<%= artist.numberofalbum %> Album(s) Released</h4>
                         <li class="list-group-item"><h3>Name:</h3><%= artist.name%> </li>
                         <li class="list-group-item"><h3>Age:</h3><%= artist.age%></li>
                         <li class="list-group-item"><h3>Years-Active:</h3> <%= artist.yearsActive%></li>
                         <li class="list-group-item"><h3>genre:</h3><%= artist.genre%></li>
                         <li class="list-group-item"><h3>Website:</h3> <%= artist.website%> <a class='btn btn-primary py-3 px-4 float-right' href='/more/<%= artist.id %>'>&plus; Album</a> </li>
                         <li class="list-group-item text-center font-weight-bold"> ALBUM(S)</li>
-                        <% for(album of artist.album) { %>
-                            <li class="list-group-item"><h3>Title:</h3><%= album.title%> </li>
+                        <% for((album) of artist.album) { %>
+                            <li class="list-group-item"><h3>Title:</h3><%= album.title%> <h3 class="float-right badge badge-warning py-3 px-3 display-2"> Album No: <%= artist.album.indexOf(album) +1 %></h3></li>
                             <li class="list-group-item"><h3>Date:</h3><%= album.date%> </li>
-                            <li class="list-group-item"><h3>Number of Tracks:</h3><%= album.tracks%> </li>
+                            <li class="list-group-item"><h3>Number of Tracks:</h3><%= album.tracks%><a class="btn btn-danger py-3 badge px-4 float-right" href='/deletealbum/<%=artist.id%>/<%= album.id %>'>Delete Album</a> </li>
                             <hr>
                         <% } %>
-                        
+                        <div class='text-center'>
+                            <a class=" btn btn-danger py-4 badge px-4  mb-2" href='/removeartist/<%=artist.id%>'>Remove Artist</a>
+                        </div>
                     <% } %>
-                    </ul>
+        </ul>
 
     </div>
 

@@ -1,13 +1,11 @@
-#headertext{
-    background:#A31A1D;
+#headertext, .container-fluid{
+    background:#ddab06;
 }
-
+body{
+     background:#ddab06 !important;
+}
 h1{
-    color: white !important;
-}
-
-i{
-    font-size: 1.7em;
+    color: black !important;
 }
 
 .card-header,#createbutton{
@@ -17,6 +15,9 @@ i{
 }
 #createbutton,input{
     padding-bottom: 5rem;
+}
+.badge,.font-weight-bold{
+    font-size: 14px !important;
 }
 
 

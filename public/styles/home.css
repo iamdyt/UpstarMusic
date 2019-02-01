@@ -1,22 +1,15 @@
-#headertext{
-    background:#A31A1D;
+.container-fluid{
+    background:#ddab06;
 }
 
-#leftsidebar{
-    background:#212B55;
-}
-#submitbutton{
-    background:#053C5B;
-}
 h1{
-    color: white !important;
+    color: #000000 !important;
 }
 
-i{
-    font-size: 1.7em;
+body{
+    background: #ddab06 !important;
 }
 
-a:visited{
-    
+#starthere{
+    padding-top: 18em;
 }
-

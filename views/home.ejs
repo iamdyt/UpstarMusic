@@ -10,41 +10,24 @@
     <title>UPSTARMUSIC</title>
 </head>
 <body>
-    <div class="container mt-3">
+    <div class="container-fluid py-3">
         <!-- Top-Bar -->
         <div class="row">
             <div class="col">
-                <nav class="nav nav-justified display-4 text-light py-3 pl-2 shadow-sm rounded" id="headertext">
-                    <i class="fas fa-play ml-2"></i>
-                    <a class="nav-item nav-link active" href="/"><h1> UPSTAR MUSIC</h1></a>
+                <nav class="nav nav-justified display-4 text-light shadow-sm rounded" id="headertext">
+                    <a class="nav-item nav-link active" href="/"><h1 class=""> UPSTAR MUSIC</h1></a>
                     <a class="nav-item nav-link" href="/showall"><h1>List Artist</h1></a>
                     <a class="nav-item nav-link" href="/create-artist"><h1>Create Artist</h1></a>
-                </nav>
-            
-                
-                
+                </nav> 
             </div>
         </div>
 
-        <!-- leftsidebar -->
-        <div class="row mt-3">
-            <div class="col-lg-4">
-                <form id="leftsidebar" class="shadow" method="POST" action='/search'>
-                    <h3 class="display-4 text-center text-light">Search</h3>
-                    <span class="form-group mt-3 mx-2">
-                    <input type="text" placeholder="Name" class="form-control rounded-0 my-4 text-center" name="search">
-                    <div id="buttonsub" class="text-center">
-                        <button id = 'submitbutton' class="btn btn-lg py-3 px-5 shadow text-light rounded-0 shadow-sm mt-2 mb-2">Submit</button>
-                    </div>
-                    </span>
-                </form>
-            </div>
-
-            <div class="col-lg-8">
-                    <p class="display-4 text-center"> Nothing Found! </p>
-                    <p class="display-4 text-center">Try Searching again</p>
+        <div class="row mt-5">
+            <div class="col text-center" id="starthere">
+                <a href="/create-artist" class="btn btn-dark py-5 px-5 shadow"><h1>START HERE</h1></a>
             </div>
         </div>
+        
     </div>
     <% include config/jquerycdn %>
 </body>

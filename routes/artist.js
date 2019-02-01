@@ -29,5 +29,13 @@ module.exports = {
         .catch(error => {
             console.log(error);
         });
+    },
+
+    removeArtist(req,res){
+        const id = req.params.id;
+       Artist.findByIdAndDelete(id)
+        .then(onremove=>{
+            res.redirect('/showall');
+        });
     }
 };

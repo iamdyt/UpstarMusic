@@ -24,6 +24,19 @@ module.exports = {
             .catch((error)=>{
                 console.log(error);
             });
+    },
+
+    deleteAlbum(req,res){
+        Artist.findById(req.params.pid)
+            .then(artist => {
+                //res.json(parentId)
+                artist.album.id(req.params.cid).remove();
+                artist.save();
+                res.redirect('/showall');
+            })
+            .catch(error=>{
+                console.log(error);
+            });
     }
 
 
