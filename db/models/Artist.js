@@ -26,7 +26,8 @@ const artistSchema = new Schema({
 
 artistSchema.virtual('numberofalbum').get(function(){
     return  this.album.length;
-})
+});
+
 const Artist = mongoose.model('artist',artistSchema);
 
 module.exports = Artist;

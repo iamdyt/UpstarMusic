@@ -9,15 +9,16 @@
   "author": "DYT",
   "license": "ISC",
   "dependencies": {
+    "braces": "^3.0.2",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "mongoose": "^5.4.7",
+    "express": "^4.17.1",
+    "mongoose": "^5.5.14",
     "morgan": "^1.9.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.5",
+    "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0"
   }
 }
